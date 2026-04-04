@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shailesh | Projects & Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top-bar">
+    <div class="logo">Shailesh</div>
+    <nav class="main-nav">
+        <a href="#" class="nav-link active" data-page="projects">Projects</a>
+        <span class="nav-divider">/</span>
+        <a href="#" class="nav-link" data-page="notes">Notes</a>
+    </nav>
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+</header>
+
+<main id="projectsPage" class="page active">
+    <section class="section">
+        <h2 class="section-title">Projects</h2>
+
+        <h3 class="category-title">Data Science</h3>
+        <div class="card-grid">
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>Sales Forecasting</h4>
+                <p>Predict monthly sales for retail stores.</p>
+            </article>
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>Customer Churn</h4>
+                <p>Find users likely to leave a service.</p>
+            </article>
+            <article class="card project-card">
+                <span class="badge badge-soft">In progress</span>
+                <h4>Movie Recommender</h4>
+                <p>Suggest movies using user ratings.</p>
+            </article>
+        </div>
+
+        <h3 class="category-title">Python</h3>
+        <div class="card-grid">
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>CLI Task Manager</h4>
+                <p>Todo app in terminal with JSON store.</p>
+            </article>
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>Flask Blog</h4>
+                <p>Simple blog with SQLite backend.</p>
+            </article>
+        </div>
+
+        <h3 class="category-title">Web (HTML / CSS / JS)</h3>
+        <div class="card-grid">
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>Landing Page</h4>
+                <p>Responsive product landing page.</p>
+            </article>
+            <article class="card project-card">
+                <span class="badge">Complete</span>
+                <h4>Glass UI Kit</h4>
+                <p>Glassmorphism cards and buttons.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<main id="notesPage" class="page">
+    <section class="section">
+        <h2 class="section-title">Notes</h2>
+        <div class="notes-grid">
+            <div class="note-card" data-subject="Data Science"><h3>Data Science</h3></div>
+            <div class="note-card" data-subject="Python"><h3>Python</h3></div>
+            <div class="note-card" data-subject="HTML"><h3>HTML</h3></div>
+            <div class="note-card" data-subject="CSS"><h3>CSS</h3></div>
+            <div class="note-card" data-subject="JavaScript"><h3>JavaScript</h3></div>
+        </div>
+    </section>
+</main>
+
+<main id="subjectPage" class="page">
+    <section class="section subject-wrap">
+        <aside class="subject-side">
+            <button id="backToNotes" class="back-btn">← Back</button>
+            <h3 id="subjectTitle">Data Science</h3>
+            <nav class="subject-nav">
+                <a href="#" class="subject-link active" data-target="projects">Projects</a>
+                <a href="#" class="subject-link" data-target="programs">Programs</a>
+                <a href="#" class="subject-link" data-target="notes">Notes</a>
+            </nav>
+        </aside>
+        <div class="subject-main">
+            <div id="sub-projects" class="sub-section active">
+                <h4>Projects</h4>
+                <ul class="simple-list">
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                </ul>
+            </div>
+            <div id="sub-programs" class="sub-section">
+                <h4>Programs</h4>
+                <ul class="simple-list">
+                    <li>Program 1</li>
+                    <li>Program 2</li>
+                </ul>
+            </div>
+            <div id="sub-notes" class="sub-section">
+                <div class="sub-notes-head">
+                    <h4>Notes</h4>
+                    <button id="addNoteBtn" class="add-note-btn">+ Note</button>
+                </div>
+                <ul id="notesList" class="simple-list">
+                    <li>Note 1: Intro</li>
+                    <li>Note 2: Advanced</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<aside id="sidebar" class="sidebar">
+    <button id="sidebarClose" class="sidebar-close">×</button>
+    <h3>Quick Access</h3>
+    <ul class="side-list">
+        <li data-subject="Data Science">Data Science</li>
+        <li data-subject="Python">Python</li>
+        <li data-subject="HTML">HTML</li>
+        <li data-subject="CSS">CSS</li>
+        <li data-subject="JavaScript">JavaScript</li>
+    </ul>
+</aside>
+
+<div id="addNoteModal" class="modal">
+    <div class="modal-box">
+        <span class="close">×</span>
+        <h3>Add Note</h3>
+        <form id="noteForm">
+            <input id="noteTitle" placeholder="Title" required>
+            <textarea id="noteContent" rows="4" placeholder="Content" required></textarea>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-main">
+        <div>
+            <h3>Shailesh</h3>
+            <p>Data science · Python · Web dev</p>
+        </div>
+        <div>
+            <span>Contact</span>
+            <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
+        </div>
+        <div class="foot-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://leetcode.com" target="_blank">LeetCode</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+    <p class="footer-copy">© 2026 Shailesh</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
