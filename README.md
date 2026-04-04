@@ -4,4 +4,4 @@ This repo is auto-managed by the portfolio app.
 
 ## Projects
 
-_No projects yet._
+- [school](https://github.com/Shailesh-Gouda/python/tree/main/projects/school) — school data store
